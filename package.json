@@ -6,6 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server -d --host 0.0.0.0  --inline --progress --no-info",
+    "test": "jest",
     "lint:ts": "tslint src/*.tsx src/**/*.tsx"
   },
   "devDependencies": {
@@ -50,6 +51,9 @@
       "<rootDir>/src",
       "<rootDir>/node_modules"
     ],
+    "moduleNameMapper": {
+      "\\.css$": "<rootDir>/__mocks__/styleMock.js"
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",
