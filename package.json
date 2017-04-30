@@ -4,10 +4,12 @@
   "description": "Academy UI",
   "license": "MIT",
   "scripts": {
+    "prebuild": "npm run lint:ts",
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server -d --host 0.0.0.0  --inline --progress --no-info",
     "test": "jest",
-    "lint:ts": "tslint src/*.tsx src/**/*.tsx"
+    "lint:ts": "tslint src/*.tsx src/**/*.tsx",
+    "lint": "npm run lint:ts"
   },
   "devDependencies": {
     "@types/enzyme": "^2.7.9",
