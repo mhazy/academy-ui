@@ -1,13 +1,14 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-import { App } from './app';
-import { Hello } from './hello';
+import { App } from "./app";
+import { Hello } from "./hello";
+
+import "./index.css";
 
 ReactDOM.render(
   <App>
-      <Hello greeting={ 'Hey' } />
+      <Hello greeting={ "Hey" } />
   </App>,
-  document.getElementById('root')
-)
-
+  document.getElementById("root"),
+);

@@ -1,5 +1,6 @@
 const path = require('path');
 const plugins = require('./webpack/plugins');
+const loaders = require('./webpack/loaders.js');
 
 module.exports = {
   entry: {
@@ -22,17 +23,7 @@ module.exports = {
   },
 
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-      },
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        loader: 'source-map-loader',
-      }
-    ]
+    rules: loaders,
   },
 
   plugins: plugins,
