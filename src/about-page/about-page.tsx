@@ -7,6 +7,5 @@ interface IAboutPageProps {
 export const AboutPage = (props: IAboutPageProps) => (
   <div>
     <h2>About Page</h2>
-    <div>{ props.children }</div>
   </div>
 );

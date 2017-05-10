@@ -7,7 +7,8 @@ module.exports = {
     app: './src/index.tsx',
     vendor: [
       'react',
-      'react-dom'
+      'react-dom',
+      'react-router-dom'
     ],
   },
 
@@ -17,6 +18,11 @@ module.exports = {
   },
 
   devtool: 'sourcemap',
+  devServer: {
+    historyApiFallback: {
+      index: '/',
+    },
+  },
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],

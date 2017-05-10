@@ -29,4 +29,8 @@ module.exports = [
     test: /\.css$/,
     use: cssLoader,
   },
+  {
+    test: /\.(png|jpg)$/,
+    use: 'file-loader',
+  }
 ];

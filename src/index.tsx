@@ -1,14 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { App } from "./app";
 import { Hello } from "./hello";
+import { Root } from "./root";
 
 import "./index.css";
 
 ReactDOM.render(
-  <App>
-      <Hello greeting={ "Hey" } />
-  </App>,
+  <Root />,
   document.getElementById("root"),
 );

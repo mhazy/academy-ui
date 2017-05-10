@@ -1,14 +1,26 @@
 import * as React from "react";
+import { connect } from "react-redux";
+import { Provider } from "react-redux";
+import { Link, Route } from "react-router-dom";
+import { ConnectedRouter, ConnectedRouterProps } from "react-router-redux";
 
-interface IAppProps {
-  children?: any;
-}
+import { Header } from "../header";
 
-export const App = (props: IAppProps) => (
-  <div>
-    <h1>App Container!</h1>
+import { AboutPage } from "../about-page";
+import { HomePageConnected } from "../home-page";
+import { history } from "../root/root.store";
+import { IAppState, storeConnector } from "./app.selectors";
+
+export const App = () => (
+  <ConnectedRouter history={history}>
     <div>
-    { props.children }
+      <Header />
+      <div className="pt4">
+        <Route exact path="/" component={ HomePageConnected } />
+        <Route path="/about" component={ AboutPage } />
+      </div>
     </div>
-  </div>
+  </ConnectedRouter>
 );
+
+export const AppConnected = connect<{}, {}, ConnectedRouterProps<IAppState>>(storeConnector)(App);

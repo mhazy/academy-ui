@@ -1,5 +1,6 @@
-import { App } from "./app";
+import { App, AppConnected } from "./app";
 
 export {
   App,
+  AppConnected,
 };
