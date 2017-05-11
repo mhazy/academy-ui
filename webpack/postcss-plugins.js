@@ -44,6 +44,7 @@ const postcssProdPlugins = [
       'width',
       'transform',
     ],
+    replace: true,
   }),
 ];
 
