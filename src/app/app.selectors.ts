@@ -5,5 +5,5 @@ export interface IAppState {
 }
 
 export const storeConnector = createStructuredSelector({
-  someProp: () => "Cool",
+  someProp: () => "Some Prop with createStructuredSelector",
 });
